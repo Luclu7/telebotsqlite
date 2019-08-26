@@ -1,6 +1,6 @@
 # Telebot SQLite
 
-This project is just a generic inline telegram bot. It only suppors audios and pictures for now.
+This project is just a generic inline Telegram bot. It supports audio, pictures and documents (aka files).
 
 You change easily change the content by editing the db.sqlite file (table "entries") with this structure:
 
