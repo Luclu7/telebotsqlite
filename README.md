@@ -10,7 +10,7 @@ You change easily change the content by editing the db.sqlite file (table "entri
 | ultima 6 intro | https://luclu7.fr/pub/ultima6intro.mp3                                               | anything you want                                                                   | audio    | anything you want |
 | 42.zip         | http://www.unforgettable.dk/42.zip                                                   | anything you want                                                                   | document | application/zip   |
 
-Please note that the MIME type for documents (file) can only be either "application/pdf" or "application/zip" ([Telebot/Telegram API limitation](https://github.com/tucnak/telebot/blob/v2/inline_types.go#L109)
+Please note that the MIME type for documents (file) can only be either "application/pdf" or "application/zip" ([Telebot/Telegram API limitation](https://github.com/tucnak/telebot/blob/v2/inline_types.go#L109))
 
 You must put something (whatever you want) in the _thumburl_ and _mime_ column if it's not respectively a picture or a document (file), at least for now.
 
