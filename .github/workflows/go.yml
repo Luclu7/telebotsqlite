@@ -22,18 +22,4 @@ jobs:
         
     - name: Build
       run: go build -v .
-      
-on: release
-name: Handle Release
-jobs:
-  upload:
-    name: Upload Artifacts
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Upload
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: 'telebotsqlite-*'
+     
