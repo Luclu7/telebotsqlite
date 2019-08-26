@@ -16,5 +16,14 @@ You must put something (whatever you want) in the _thumburl_ and _mime_ column i
 
 As this program uses [go-sqlite3](https://github.com/mattn/go-sqlite3), it uses CGo.
 
+## Installation
+
+Just download the [latest release](https://github.com/Luclu7/telebotsqlite/releases), launch it to create the SQLite database (db.sqlite) and edit it with your favourite SQLite client.
+You can also just download the example database [here](https://github.com/Luclu7/telebotsqlite/raw/master/db.template.sqlite). Don't forget to rename it to db.sqlite.
+You must export the `TELEBOT_TOKEN` environment variable with your Telegram token, then launch it. Mention your bot anywhere and it should work.
+
+## (basic) Troubleshooting
+Don't forget to enable the inline mode on your bot.
+
 ## License
 Feel free to fork it and do your own stuff with it, this project is under the Unlicense, see [LICENSE.md](LICENSE.md).
