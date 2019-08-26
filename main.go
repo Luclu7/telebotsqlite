@@ -28,6 +28,21 @@ func logCommand(m *tb.Message, command string) {
 }
 
 func main() {
+
+	if _, err := os.Stat("./db.sqlite"); os.IsNotExist(err) {
+		log.Print("Database does not exist. Creating it. Note that you must add entries externally")
+		db, _ := sql.Open("sqlite3", "./db.sqlite")
+		createEntriesTable := `
+			CREATE TABLE entries (name TEXT, url TEXT, thumburl TEXT, type TEXT, mime TEXT);
+		`
+		_, err = db.Exec(createEntriesTable)
+		if err != nil {
+			log.Printf("%q: %s\n", err, createEntriesTable)
+			return
+		}
+		os.Exit(0)
+
+	}
 	db, err := sql.Open("sqlite3", "./db.sqlite")
 	if err != nil {
 		log.Fatal(err)
